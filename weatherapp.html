@@ -27,22 +27,22 @@
                
                 
                 
-                  <input type="text" class="form-control w-50 mx-auto text-white   " id="result" placeholder="Place"
-                    style="margin-top:4.5rem;background-color: rgba(176, 177, 179, 0.423); border-radius:10px;">
+                  <input type="text" class="form-control w-50  text-white   " id="result" placeholder="enter place"
+                    style="margin-top:4.5rem;margin-left:68px;background-color: rgba(176, 177, 179, 0.423); border-radius:10px;">
                    
                 
-                <button class="btn btn-success mt-3 " type="button" " onclick="searchWeather()" > Search</button>
-                <button type="button" class="btn btn-dark mt-3 " onclick="autolocateInfo()" style="color: rgb(255, 255, 255)" ><i class="fa-solid fa-location-crosshairs fa-fade fa-1.5x" style="color: rgb(247, 245, 245);"></i>  Current Location</button>
+                <button class="btn btn-warning "style="margin-top:15px;margin-left:55px;" type="button" s onclick="searchWeather()" ><i class="fa-solid fa-1.5x fa-magnifying-glass"></i> Search</button>
+                <button type="button" class="btn btn-dark mt-3 " onclick="autolocateInfo()" style="color: rgb(247, 226, 37)" ><i class="fa-solid fa-location-dot fa-1.5x"></i>  your Location</button>
         </div>
         </div>
-        <div class=" col-lg-6 col-md-12 col-sm-12  mx-auto " id="today" style="margin-top: 5%; height: 550px; " >
+        <div class=" col-lg-6 col-md-12 col-sm-12  mx-auto " id="today" style="margin-top: 5%; height: 50px; " >
             
-            <div class="row mt-5 mx-auto mt-5   " style=" background-color: rgba(197, 179, 179, 0.618); border-radius: 15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width: 90%; margin-top: 50px;">
+            <div class="row mt-5 mx-auto mt-5   " style=" background-color: rgba(146, 74, 74, 0.618); border-radius: 15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width: 57%; margin-top: 50px;">
 
-            <div class="col-lg-6 col-md-6 col-sm-12 " id="empdiv1">
+            <div class="col-lg-6 col-md-6 col-sm-12 " id="empdiv1" style="width:60%">
 
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 " style="border-left: 1px solid black;  " id="empdiv2" ></div>
+            <!-- <div class="col-lg-6 col-md-6 col-sm-12 " ;   id="empdiv2" ></div> -->
         </div>
         
         </div>
@@ -87,25 +87,26 @@ maxtemp=Math.round(wdata.main.temp_max-272)
 
 
 empdiv1.innerHTML=`
-<h1 class="text-center mt-5 "> ${place}</H1>
-    <h4 class="text-center mt-2">${condition}</h4>
-    <h6 class="text-center mt-5 pt-3 "><i class="fa-solid fa-temperature-three-quarters"></i> ${temp}℃   <i class="fa-solid fa-wind" style="color: #1e3050;"></i> ${windspeed}Km/H</H6>
-
+<h1 class="text-center" style="margin-left:41px"><u> ${place}</u></H1>
+    <h2 class="text-center"   style="margin-left:52px"><u> ${temp}℃ </u>   </H6>
+    <h3 class=" mt-3"> Humidity-${humidity}%</h3>
+    <h6 class=" mt-3">Min Temp-${mintemp} ℃</h6>
+    <h6 class="mt-3">Max Temp-${maxtemp} ℃</h6>
 
 `
-empdiv2.innerHTML=`
-<ul >
+//  empdiv2.innerHTML=`
+//  <ul >
    
-    <li class="list-group-item mt-3">Temp- ${temp}℃</li>
-    <li class="list-group-item mt-3"> feels like-${feeltemp} ℃</li>
-    <li class="list-group-item mt-3"> Humidity-${humidity}%</li>
-    <li class="list-group-item mt-3"> pressure-${pressure} mb</li>
-    <li class="list-group-item mt-3">Min Temp-${mintemp} ℃</li>
-    <li class="list-group-item mt-3">Max Temp-${maxtemp} ℃</li>
+// // //     // <li class="list-group-item mt-3">Temp- ${temp}℃</li>
+// // //     // <
+// // //     // <li class="list-group-item mt-3"> Humidity-${humidity}%</li>
+// // //     // <li class="list-group-item mt-3"> pressure-${pressure} mb</li>
+// // //     // <li class="list-group-item mt-3">Min Temp-${mintemp} ℃</li>
+// // //     // <li class="list-group-item mt-3">Max Temp-${maxtemp} ℃</li>
 
     
-  </ul>
-    `
+//   </ul>
+//     `
     
 
 
